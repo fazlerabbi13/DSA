@@ -93,27 +93,27 @@ public:
     }
 
     // Delete at Middle (position)
-    // void deleteAtMiddle(int pos) {
-    //     if (head == nullptr) {
-    //         cout << "List is empty!\n";
-    //         return;
-    //     }
-    //     if (pos == 1) {
-    //         deleteAtHead();
-    //         return;
-    //     }
-    //     Node* temp = head;
-    //     for (int i = 1; i < pos - 1 && temp != nullptr; i++) {
-    //         temp = temp->next;
-    //     }
-    //     if (temp == nullptr || temp->next == nullptr) {
-    //         cout << "Invalid position!\n";
-    //         return;
-    //     }
-    //     Node* delNode = temp->next;
-    //     temp->next = delNode->next;
-    //     delete delNode;
-    // }
+    void deleteAtMiddle(int pos) {
+        if (head == nullptr) {
+            cout << "List is empty!\n";
+            return;
+        }
+        if (pos == 1) {
+            deleteAtHead();
+            return;
+        }
+        Node* temp = head;
+        for (int i = 1; i < pos - 1 && temp != nullptr; i++) {
+            temp = temp->next;
+        }
+        if (temp == nullptr || temp->next == nullptr) {
+            cout << "Invalid position!\n";
+            return;
+        }
+        Node* delNode = temp->next;
+        temp->next = delNode->next;
+        delete delNode;
+    }
 
     // Display Linked List
     void display() {
