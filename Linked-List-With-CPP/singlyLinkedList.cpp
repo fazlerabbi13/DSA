@@ -43,77 +43,77 @@ public:
     }
 
     // Insert at Middle (at position)
-    void insertAtMiddle(int value, int pos) {
-        if (pos == 1) {
-            insertAtHead(value);
-            return;
-        }
-        Node* newNode = new Node(value);
-        Node* temp = head;
-        for (int i = 1; i < pos - 1 && temp != nullptr; i++) {
-            temp = temp->next;
-        }
-        if (temp == nullptr) {
-            cout << "Invalid position!\n";
-            delete newNode;
-            return;
-        }
-        newNode->next = temp->next;
-        temp->next = newNode;
-    }
+    // void insertAtMiddle(int value, int pos) {
+    //     if (pos == 1) {
+    //         insertAtHead(value);
+    //         return;
+    //     }
+    //     Node* newNode = new Node(value);
+    //     Node* temp = head;
+    //     for (int i = 1; i < pos - 1 && temp != nullptr; i++) {
+    //         temp = temp->next;
+    //     }
+    //     if (temp == nullptr) {
+    //         cout << "Invalid position!\n";
+    //         delete newNode;
+    //         return;
+    //     }
+    //     newNode->next = temp->next;
+    //     temp->next = newNode;
+    // }
 
     // Delete at Head
-    void deleteAtHead() {
-        if (head == nullptr) {
-            cout << "List is empty!\n";
-            return;
-        }
-        Node* temp = head;
-        head = head->next;
-        delete temp;
-    }
+    // void deleteAtHead() {
+    //     if (head == nullptr) {
+    //         cout << "List is empty!\n";
+    //         return;
+    //     }
+    //     Node* temp = head;
+    //     head = head->next;
+    //     delete temp;
+    // }
 
     // Delete at Last
-    void deleteAtLast() {
-        if (head == nullptr) {
-            cout << "List is empty!\n";
-            return;
-        }
-        if (head->next == nullptr) {
-            delete head;
-            head = nullptr;
-            return;
-        }
-        Node* temp = head;
-        while (temp->next->next != nullptr) {
-            temp = temp->next;
-        }
-        delete temp->next;
-        temp->next = nullptr;
-    }
+    // void deleteAtLast() {
+    //     if (head == nullptr) {
+    //         cout << "List is empty!\n";
+    //         return;
+    //     }
+    //     if (head->next == nullptr) {
+    //         delete head;
+    //         head = nullptr;
+    //         return;
+    //     }
+    //     Node* temp = head;
+    //     while (temp->next->next != nullptr) {
+    //         temp = temp->next;
+    //     }
+    //     delete temp->next;
+    //     temp->next = nullptr;
+    // }
 
     // Delete at Middle (position)
-    void deleteAtMiddle(int pos) {
-        if (head == nullptr) {
-            cout << "List is empty!\n";
-            return;
-        }
-        if (pos == 1) {
-            deleteAtHead();
-            return;
-        }
-        Node* temp = head;
-        for (int i = 1; i < pos - 1 && temp != nullptr; i++) {
-            temp = temp->next;
-        }
-        if (temp == nullptr || temp->next == nullptr) {
-            cout << "Invalid position!\n";
-            return;
-        }
-        Node* delNode = temp->next;
-        temp->next = delNode->next;
-        delete delNode;
-    }
+    // void deleteAtMiddle(int pos) {
+    //     if (head == nullptr) {
+    //         cout << "List is empty!\n";
+    //         return;
+    //     }
+    //     if (pos == 1) {
+    //         deleteAtHead();
+    //         return;
+    //     }
+    //     Node* temp = head;
+    //     for (int i = 1; i < pos - 1 && temp != nullptr; i++) {
+    //         temp = temp->next;
+    //     }
+    //     if (temp == nullptr || temp->next == nullptr) {
+    //         cout << "Invalid position!\n";
+    //         return;
+    //     }
+    //     Node* delNode = temp->next;
+    //     temp->next = delNode->next;
+    //     delete delNode;
+    // }
 
     // Display Linked List
     void display() {
