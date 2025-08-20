@@ -43,24 +43,24 @@ public:
     }
 
     // Insert at Middle (at position)
-    // void insertAtMiddle(int value, int pos) {
-    //     if (pos == 1) {
-    //         insertAtHead(value);
-    //         return;
-    //     }
-    //     Node* newNode = new Node(value);
-    //     Node* temp = head;
-    //     for (int i = 1; i < pos - 1 && temp != nullptr; i++) {
-    //         temp = temp->next;
-    //     }
-    //     if (temp == nullptr) {
-    //         cout << "Invalid position!\n";
-    //         delete newNode;
-    //         return;
-    //     }
-    //     newNode->next = temp->next;
-    //     temp->next = newNode;
-    // }
+    void insertAtMiddle(int value, int pos) {
+        if (pos == 1) {
+            insertAtHead(value);
+            return;
+        }
+        Node* newNode = new Node(value);
+        Node* temp = head;
+        for (int i = 1; i < pos - 1 && temp != nullptr; i++) {
+            temp = temp->next;
+        }
+        if (temp == nullptr) {
+            cout << "Invalid position!\n";
+            delete newNode;
+            return;
+        }
+        newNode->next = temp->next;
+        temp->next = newNode;
+    }
 
     // Delete at Head
     // void deleteAtHead() {
