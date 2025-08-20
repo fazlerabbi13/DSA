@@ -63,15 +63,15 @@ public:
     }
 
     // Delete at Head
-    // void deleteAtHead() {
-    //     if (head == nullptr) {
-    //         cout << "List is empty!\n";
-    //         return;
-    //     }
-    //     Node* temp = head;
-    //     head = head->next;
-    //     delete temp;
-    // }
+    void deleteAtHead() {
+        if (head == nullptr) {
+            cout << "List is empty!\n";
+            return;
+        }
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+    }
 
     // Delete at Last
     // void deleteAtLast() {
