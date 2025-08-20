@@ -5,7 +5,7 @@ public class LinearSearch {
                 return i;  // Found the element
             }
         }
-        return -1; // Not found
+        return -1; // Not found 
     }
 
     public static void main(String[] args) {

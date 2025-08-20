@@ -1,34 +1,24 @@
 package LinkedList;
 
 public class SinglyLinked {
-    static class Node {
-        int data;
-        Node next;
+    private Node head;
+    private Node tail;
+    private int size;
 
-        Node(int data) {
-            this.data = data;
-            this.next = null;
-        }
+    public SinglyLinked(){
+        this.size=0;
     }
 
-    public static void main(String[] args) {
-        // Creating individual nodes
-        Node firstNode = new Node(3);
-        Node secondNode = new Node(5);
-        Node thirdNode = new Node(13);
-        Node fourthNode = new Node(2);
+    private class Node{
+        private int value;
+        private Node next;
 
-        // Linking nodes together
-        firstNode.next = secondNode;
-        secondNode.next = thirdNode;
-        thirdNode.next = fourthNode;
-
-        // Printing linked list
-        Node currentNode = firstNode;
-        while (currentNode != null) {
-            System.out.print(currentNode.data + " -> ");
-            currentNode = currentNode.next;
+        public Node(int value){
+            this.value=value;
         }
-        System.out.println("null");
+        public Node(int value,Node next){
+            this.value=value;
+            this.next=next;
+        }
     }
 }
