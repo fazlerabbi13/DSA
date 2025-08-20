@@ -74,23 +74,23 @@ public:
     }
 
     // Delete at Last
-    // void deleteAtLast() {
-    //     if (head == nullptr) {
-    //         cout << "List is empty!\n";
-    //         return;
-    //     }
-    //     if (head->next == nullptr) {
-    //         delete head;
-    //         head = nullptr;
-    //         return;
-    //     }
-    //     Node* temp = head;
-    //     while (temp->next->next != nullptr) {
-    //         temp = temp->next;
-    //     }
-    //     delete temp->next;
-    //     temp->next = nullptr;
-    // }
+    void deleteAtLast() {
+        if (head == nullptr) {
+            cout << "List is empty!\n";
+            return;
+        }
+        if (head->next == nullptr) {
+            delete head;
+            head = nullptr;
+            return;
+        }
+        Node* temp = head;
+        while (temp->next->next != nullptr) {
+            temp = temp->next;
+        }
+        delete temp->next;
+        temp->next = nullptr;
+    }
 
     // Delete at Middle (position)
     // void deleteAtMiddle(int pos) {
