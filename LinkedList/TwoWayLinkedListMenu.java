@@ -28,16 +28,16 @@ class DoublyLinkedList {
     }
 
     // Insert at last
-    // public void insertAtLast(int data) {
-    //     Node newNode = new Node(data);
-    //     if (tail == null) {
-    //         head = tail = newNode;
-    //     } else {
-    //         tail.next = newNode;
-    //         newNode.prev = tail;
-    //         tail = newNode;
-    //     }
-    // }
+    public void insertAtLast(int data) {
+        Node newNode = new Node(data);
+        if (tail == null) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
+    }
 
     // Insert at middle (position)
     // public void insertAtMiddle(int data, int position) {
