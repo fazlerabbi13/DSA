@@ -26,5 +26,13 @@ class myStack {
 
         count++;
     }
+
+    int pop(){
+        if(top == null){
+            System.out.println("Stack Underflow");
+            return -1;
+        }
+        
+    }
     
 }
