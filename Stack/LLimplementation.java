@@ -70,7 +70,7 @@ class LLimplementation{
 
         System.out.println("popped: "+ st.pop());
 
-        // System.out.println("Top element: " + st.peek());
+        System.out.println("Top element: " + st.peek());
 
     }
 }
