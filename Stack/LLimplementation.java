@@ -39,5 +39,13 @@ class myStack {
         count--;
         return val;
     }
+
+    int peek(){
+        if(top == null){
+            System.out.println("Stack is empty");
+            return -1;
+        }
+        return top.data;
+    }
     
 }
