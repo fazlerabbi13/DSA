@@ -47,5 +47,30 @@ class myStack {
         }
         return top.data;
     }
+
+    boolean isEmpty(){
+        return top == null;
+    }
+
+    int size(){
+        return count;
+    }
+
     
+}
+
+class LLimplementation{
+    public static void main(String[] args) {
+        myStack st = new myStack();
+
+        st.push(1);
+        st.push(2);
+        st.push(3);
+        st.push(4);
+
+        // System.out.println("popped: "+ st.pop());
+
+        // System.out.println("Top element: " + st.peek());
+
+    }
 }
