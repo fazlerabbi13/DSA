@@ -68,7 +68,7 @@ class LLimplementation{
         st.push(3);
         st.push(4);
 
-        // System.out.println("popped: "+ st.pop());
+        System.out.println("popped: "+ st.pop());
 
         // System.out.println("Top element: " + st.peek());
 
