@@ -32,7 +32,12 @@ class myStack {
             System.out.println("Stack Underflow");
             return -1;
         }
-        
+        Node temp = top;
+        top = top.next;
+        int val = temp.data;
+
+        count--;
+        return val;
     }
     
 }
