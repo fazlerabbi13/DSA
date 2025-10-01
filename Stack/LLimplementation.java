@@ -72,5 +72,6 @@ class LLimplementation{
 
         System.out.println("Top element: " + st.peek());
 
+        System.out.println("is stack empty: "+ (st.isEmpty() ? "Yes":"No"));
     }
 }
